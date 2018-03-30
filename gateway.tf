@@ -17,5 +17,6 @@ resource "aviatrix_gateway" "aws_gateway" {
        vpc_size = "${var.aws_instance}"
         vpc_net = "${var.aws_vpc_public_cidr}"
       ha_subnet = "${var.aviatrix_gateway_ha_subnet}"
+     depends_on = ["aviatrix_upgrade.upgrade315"]
 }
 
