@@ -1,8 +1,13 @@
 # Create Aviatrix gateway in AWS public cloud 
 #
+
+# upgrade controller
+resource "aviatrix_upgrade" "upgrade-3.1.5" {
+    version   = "${var.aviatrix_custom_version}"
+}
+
 # To Enable HA Gateway add line  "ha_subnet" keyword 
 # To Disable HA Gateway delete "ha_subnet" keyword 
-
 resource "aviatrix_gateway" "aws_gateway" {
      cloud_type = "${var.aviatrix_cloud_type_aws}"
    account_name = "${var.aviatrix_cloud_account_name}"
@@ -13,5 +18,4 @@ resource "aviatrix_gateway" "aws_gateway" {
         vpc_net = "${var.aws_vpc_public_cidr}"
       ha_subnet = "${var.aviatrix_gateway_ha_subnet}"
 }
-      #ha_subnet = "${var.aviatrix_gateway_ha_subnet}"
 
