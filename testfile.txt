@@ -1,7 +1,3 @@
 github webhook... hello world
-test3
-test4
-test5
-test6 --- normal
-
 for build #34
+for build #35
