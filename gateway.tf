@@ -2,7 +2,7 @@
 #
 
 # upgrade controller
-resource "aviatrix_upgrade" "upgrade-3.1.5" {
+resource "aviatrix_upgrade" "upgrade315" {
     version   = "${var.aviatrix_custom_version}"
 }
 
